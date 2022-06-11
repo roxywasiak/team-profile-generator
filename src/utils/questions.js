@@ -8,6 +8,7 @@ const teamQuestions = [
 ];
 
 // manager questions name id email office number
+//not sure if I need office number
 const managerQuestions = [
   {
     type: "input",
@@ -42,13 +43,61 @@ const employeeRoleQuestions = [
 ];
 
 // engineer questions
-const engineerQuestions = [{}];
+const engineerQuestions = [
+  {
+    type: "input",
+    message: "Enter employee name",
+    name: "name",
+  },
+  {
+    type: "input",
+    message: "Enter employee id",
+    name: "id",
+  },
+  {
+    type: "input",
+    message: "Enter employee email",
+    name: "email",
+  },
+  {
+    type: "input",
+    message: "Enter employee github",
+    name: "github",
+  },
+];
 
 //intern questions
-const internQuestions = [{}];
+const internQuestions = [
+  {
+    type: "input",
+    message: "Enter employee name",
+    name: "name",
+  },
+  {
+    type: "input",
+    message: "Enter employee id",
+    name: "id",
+  },
+  {
+    type: "input",
+    message: "Enter employee email",
+    name: "email",
+  },
+  {
+    type: "input",
+    message: "Enter the employee school",
+    name: "school",
+  },
+];
 
-//continue questions/confirm to add another etc
-const questionsContinue = [{}];
+//continue questions/confirm to add another etc type confirm?
+const questionsContinue = [
+  {
+    type: "confirm",
+    message: "Do you want to add another employeee?",
+    name: "addEmployee",
+  },
+];
 
 //export the objects
 module.exports = {
