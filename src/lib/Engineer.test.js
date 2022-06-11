@@ -42,9 +42,8 @@ describe("Engineer", () => {
   });
 
   //  get the github
-  test("should return the expected github username", () => {
+  test("should return the expected githubUsername", () => {
     const expected = "roxywasiak";
-    const instance = new Engineer({ github: "roxywasiak" });
     const actual = instance.getOfficeNumber();
 
     expect(actual).toEqual(expected);
