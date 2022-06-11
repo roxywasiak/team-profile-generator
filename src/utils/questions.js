@@ -94,7 +94,7 @@ const internQuestions = [
 const questionsContinue = [
   {
     type: "confirm",
-    message: "Do you want to add another employeee?",
+    message: "Do you want to add another employee?",
     name: "addEmployee",
   },
 ];
