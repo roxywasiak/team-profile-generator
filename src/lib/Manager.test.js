@@ -10,8 +10,8 @@ const instance = new Manager({
 });
 
 //return the expected role
-describe("Manager", () => {
-  test("should be an instance of Manager", () => {
+// describe("Manager", () => {
+  it("should be an instance of Manager", () => {
     const expected = "Manager";
     const actual = instance.getRole();
 
@@ -19,7 +19,7 @@ describe("Manager", () => {
   });
 
   //get the name
-  test("should return the expected name", () => {
+  it("should return the expected name", () => {
     const expected = "Rukhsana Wasiak";
     const actual = instance.getName();
 
@@ -27,7 +27,7 @@ describe("Manager", () => {
   });
 
   //get the id
-  test("should return the expected id", () => {
+  it("should return the expected id", () => {
     const expected = "06111983";
     const actual = instance.getId();
 
@@ -35,7 +35,7 @@ describe("Manager", () => {
   });
 
   //get the email
-  test("should return the expected email", () => {
+  it("should return the expected email", () => {
     const expected = "ruksclone@hotmail.com";
     const actual = instance.getEmail();
 
@@ -43,7 +43,7 @@ describe("Manager", () => {
   });
 
   //  get the office number
-  test("should return the expected office number", () => {
+  it("should return the expected office number", () => {
     const expected = "ruksclone@hotmail.com";
     const actual = instance.getOfficeNumber();
 

@@ -13,6 +13,8 @@ describe("Employee", () => {
   test("should be an instance of Employee", () => {
     const expected = "Employee";
     const actual = instance.getRole();
+
+    expect(actual).toEqual(expected);
   });
   //get the name
   test("should return the expected name", () => {
