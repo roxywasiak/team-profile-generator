@@ -2,15 +2,17 @@
 const Engineer = require("../lib/Engineer");
 
 //instance of employee
-const instance = new Engineer({
-  name: "Rukhsana Wasiak",
-  id: "12345678",
-  email: "ruksclone@hotmail.com",
-});
+const instance = new Engineer(
+  "Rukhsana Wasiak",
+  "12345678",
+  "ruksclone@hotmail.com",
+  "engineer",
+  "roxy"
+);
 
 //return the expected role
 describe("Engineer", () => {
-  test("should be an instance of Engineer", () => {
+  it("should be an instance of Engineer", () => {
     const expected = "Engineer";
     const actual = instance.getRole();
 
@@ -18,7 +20,7 @@ describe("Engineer", () => {
   });
 
   //get the name
-  test("should return the expected name", () => {
+  it("should return the expected name", () => {
     const expected = "Rukhsana Wasiak";
     const actual = instance.getName();
 
@@ -26,15 +28,15 @@ describe("Engineer", () => {
   });
 
   //get the id
-  test("should return the expected id", () => {
-    const expected = "06111983";
+  it("should return the expected id", () => {
+    const expected = "12345678";
     const actual = instance.getId();
 
     expect(actual).toEqual(expected);
   });
 
   //get the email
-  test("should return the expected email", () => {
+  it("should return the expected email", () => {
     const expected = "ruksclone@hotmail.com";
     const actual = instance.getEmail();
 
@@ -42,9 +44,9 @@ describe("Engineer", () => {
   });
 
   //  get the github
-  test("should return the expected githubUsername", () => {
-    const expected = "roxywasiak";
-    const actual = instance.getOfficeNumber();
+  it("should return the expected gitHubUsername", () => {
+    const expected = "roxy";
+    const actual = instance.getGithubUsername();
 
     expect(actual).toEqual(expected);
   });

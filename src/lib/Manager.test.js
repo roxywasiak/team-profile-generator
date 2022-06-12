@@ -2,15 +2,16 @@
 const Manager = require("../lib/Manager");
 
 //instance of employee
-const instance = new Manager({
-  name: "Rukhsana Wasiak",
-  id: "12345678",
-  email: "ruksclone@hotmail.com",
-  officeNumber: "87654321",
-});
+const instance = new Manager(
+  "Rukhsana Wasiak",
+  "12345678",
+  "ruksclone@hotmail.com",
+  "87654321",
+  "manager"
+);
 
 //return the expected role
-// describe("Manager", () => {
+describe("Manager", () => {
   it("should be an instance of Manager", () => {
     const expected = "Manager";
     const actual = instance.getRole();
@@ -28,7 +29,7 @@ const instance = new Manager({
 
   //get the id
   it("should return the expected id", () => {
-    const expected = "06111983";
+    const expected = "12345678";
     const actual = instance.getId();
 
     expect(actual).toEqual(expected);
@@ -44,7 +45,7 @@ const instance = new Manager({
 
   //  get the office number
   it("should return the expected office number", () => {
-    const expected = "ruksclone@hotmail.com";
+    const expected = "87654321";
     const actual = instance.getOfficeNumber();
 
     expect(actual).toEqual(expected);
