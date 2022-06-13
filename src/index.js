@@ -1,3 +1,4 @@
+console.log("hello from index.js");
 //install the dependencies
 const inquirer = require("inquirer");
 

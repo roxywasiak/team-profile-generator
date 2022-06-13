@@ -6,8 +6,8 @@ const instance = new Engineer(
   "Rukhsana Wasiak",
   "12345678",
   "ruksclone@hotmail.com",
-  "engineer",
-  "roxy"
+  "roxy",
+  "engineer"
 );
 
 //return the expected role
