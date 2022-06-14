@@ -3,7 +3,6 @@ console.log("hello from index.js");
 const inquirer = require("inquirer");
 
 //import the questions
-
 //import the object as require you want:
 const {
   teamQuestions,
@@ -23,3 +22,11 @@ const { Engineer } = require("./lib/Engineer");
 const { Intern } = require("./lib/Engineer");
 
 //init function
+const init = () => {
+  //start the questions
+  let inProgress = true;
+  //empty object which the answers will get pushed too
+  const teamMembers = [];
+
+  const {}
+};
