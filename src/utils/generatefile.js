@@ -12,13 +12,13 @@ const generateManagerCard = (manager) => {
     alt="Plain Background"
   />
   <div class="card-body">
-    <h5 class="card-title">Rukhsana Wasiak</h5>
+    <h5 class="card-title">${manager.name}</h5>
 
-    <p class="card-text">Manager</p>
-    <p class="card-text">EMID-1000</p>
-    <p class="card-text">Office Number 1</p>
+    <p class="card-text">${manager.role}</p>
+    <p class="card-text">${manager.id}</p>
+    <p class="card-text">${manager.officeNumber}</p>
     <p class="card-text">Please get in touch if you have any concerns</p>
-    <a href="mailto:ruksclone@hotmail.com" class="btn btn-primary"
+    <a href="mailto:${manager.email}" class="btn btn-primary"
       >Email</a
     >
   </div>
@@ -34,14 +34,14 @@ const generateEngineerCard = (engineer) => {
     alt="Plain Background"
   />
   <div class="card-body">
-    <h5 class="card-title">Elon Musk</h5>
-    <p class="card-text">Engineer</p>
-    <p class="card-text">EMID-2000</p>
+    <h5 class="card-title">${engineer.name}</h5>
+    <p class="card-text">${engineer.role}</p>
+    <p class="card-text">${engineer.id}</p>
     <p class="card-text">
       Please get in touch if you you would like to collaborate
     </p>
     <p class="card-text">Contact me via Github</p>
-    <a href="https://github.com/elonmusk" class="btn btn-primary"
+    <a href="https://github.com/${engineer.gitHubUsername}" class="btn btn-primary"
       >GitHub</a
     >
   </div>
@@ -49,7 +49,7 @@ const generateEngineerCard = (engineer) => {
 };
 
 //intern card
-const generateInternCard = () => {
+const generateInternCard = (intern) => {
   ` <div class="card" style="width: 18rem">
   <img
     src="./assets/images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg"
@@ -57,14 +57,14 @@ const generateInternCard = () => {
     alt="Plain Background"
   />
   <div class="card-body">
-    <h5 class="card-title">Michael Jackson</h5>
-    <p class="card-text">Intern</p>
-    <p class="card-text">EMID-2000</p>
-    <p class="card-text">School Of Rock</p>
+    <h5 class="card-title">${intern.name}</h5>
+    <p class="card-text">${intern.role}</p>
+    <p class="card-text">${intern.id}</p>
+    <p class="card-text">${intern.school}</p>
     <p class="card-text">
       If you would like to ge tin touch please contact me below
     </p>
-    <a href="mailto:ruksclone@icloud.com" class="btn btn-primary"
+    <a href="mailto:${intern.email}" class="btn btn-primary"
       >Email</a
     >
   </div>
