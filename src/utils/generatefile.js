@@ -72,11 +72,29 @@ const generateInternCard = (intern) => {
 };
 
 //go through the generated file for each role
-//if statements
-//return each generated card
-
-//map over each teamMember card pass in the generated card
-
-//return the cards and join
+const generateHTML = (teamName, teamMembers) => {
+  const generateNewCard = (teamMember) => {
+    //if statements
+    if (teamMember instanceof Manager) {
+      //return each generated card
+      return generateManagerCard(teamMember);
+    }
+    if (teamMember instanceof Engineer) {
+      return generateEngineerCard(teamMember);
+    }
+    if (teamMember instanceof Intern) {
+      return generateInternCard(teamMember);
+    }
+  };
+  //map over each teamMember card pass in the generated card
+  const teamMembersCards = teamMembers.map(generateNewCard);
+  //need to add the big file copied over with template literals except the 4 SECTIONS?
+  //return the cards and join
+  const cardContainer = teamMembersCards.join("");
+  return ``;
+};
 
 //export the modules
+module.exports = {
+  generateHTML,
+};
