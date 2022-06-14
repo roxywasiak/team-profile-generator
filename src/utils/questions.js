@@ -106,4 +106,5 @@ module.exports = {
   engineerQuestions,
   internQuestions,
   questionsContinue,
+  employeeRoleQuestions,
 };
