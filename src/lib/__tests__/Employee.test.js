@@ -1,42 +1,36 @@
 //require Employee //Employee constructor
 const Employee = require("../lib/Employee");
-
+const name = "Rukhsana Wasiak";
+const id = "12345678";
+const email = "ruksclone@hotmail.com,";
+const role = "Employee";
 //instance of employee
-const instance = new Employee(
-  "Rukhsana Wasiak",
-  "12345678",
-  "ruksclone@hotmail.com"
-);
+const instance = new Employee(name, id, email);
 
 //return the expected role
 describe("Employee", () => {
   it("should be an instance of Employee", () => {
-    const expected = "Employee";
     const actual = instance.getRole();
-
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(role);
   });
   //get the name
   it("should return the expected name", () => {
-    const expected = "Rukhsana Wasiak";
     const actual = instance.getName();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(name);
   });
 
   //get the id
   it("should return the expected id", () => {
-    const expected = "12345678";
     const actual = instance.getId();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(id);
   });
 
   //get the email
   it("should return the expected email", () => {
-    const expected = "ruksclone@hotmail.com";
     const actual = instance.getEmail();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(email);
   });
 });

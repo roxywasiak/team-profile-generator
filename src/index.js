@@ -22,7 +22,7 @@ const { Manager } = require("./lib/Manager");
 //NOT SURE WHY THESE ARE NOT BEING READ?
 const { Engineer } = require("./lib/Engineer");
 const { Intern } = require("./lib/Intern");
-const { generateHTML } = require("../..utils/generatefile");
+const { generateHTML } = require("../utils/generatefile");
 
 //init function
 const init = async () => {

@@ -50,7 +50,7 @@ const generateEngineerCard = (engineer) => {
 
 //intern card
 const generateInternCard = (intern) => {
-  ` <div class="card" style="width: 18rem">
+  return ` <div class="card" style="width: 18rem">
   <img
     src="./assets/images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg"
     class="card-img-top"
@@ -97,4 +97,5 @@ const generateHTML = (teamName, teamMembers) => {
 //export the modules
 module.exports = {
   generateHTML,
+  cardContainer,
 };

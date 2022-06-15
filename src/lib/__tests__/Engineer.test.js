@@ -1,53 +1,47 @@
 //require Employee //Employee constructor
-const Engineer = require("../lib/Engineer");
+const Engineer = require("../Engineer");
+const name = "Rukhsana Wasiak";
+const id = "12345678";
+const email = "ruksclone@hotmail.com,";
+const github = "getGithubUsername";
+const role = "Engineer";
 
 //instance of employee
-const instance = new Engineer(
-  "Rukhsana Wasiak",
-  "12345678",
-  "ruksclone@hotmail.com",
-  "roxy",
-  "engineer"
-);
+const instance = new Engineer(name, id, email, github, role);
 
 //return the expected role
 describe("Engineer", () => {
   it("should be an instance of Engineer", () => {
-    const expected = "Engineer";
     const actual = instance.getRole();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(role);
   });
 
   //get the name
   it("should return the expected name", () => {
-    const expected = "Rukhsana Wasiak";
     const actual = instance.getName();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(name);
   });
 
   //get the id
   it("should return the expected id", () => {
-    const expected = "12345678";
     const actual = instance.getId();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(id);
   });
 
   //get the email
   it("should return the expected email", () => {
-    const expected = "ruksclone@hotmail.com";
     const actual = instance.getEmail();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(email);
   });
 
   //  get the github
   it("should return the expected gitHubUsername", () => {
-    const expected = "roxy";
     const actual = instance.getGithubUsername();
 
-    expect(actual).toEqual(expected);
+    expect(actual).toEqual(github);
   });
 });
