@@ -3,7 +3,7 @@ const teamQuestions = [
   {
     type: "input",
     message: "Enter a team name:",
-    name: " teamName",
+    name: "team",
   },
 ];
 

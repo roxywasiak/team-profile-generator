@@ -1,5 +1,4 @@
 //import the classes
-const { Engineer, Intern, Manager } = require("./lib/index");
 
 //generate the cards with the html
 
@@ -73,29 +72,63 @@ const generateInternCard = (intern) => {
 
 //go through the generated file for each role
 const generateHTML = (teamName, teamMembers) => {
-  const generateNewCard = (teamMember) => {
-    //if statements
-    if (teamMember instanceof Manager) {
-      //return each generated card
-      return generateManagerCard(teamMember);
-    }
-    if (teamMember instanceof Engineer) {
-      return generateEngineerCard(teamMember);
-    }
-    if (teamMember instanceof Intern) {
-      return generateInternCard(teamMember);
-    }
+  const generatedCards = {
+    manager: generateManagerCard(teamMembers.manager),
+    interns: teamMembers.interns.map(generateInternCard),
+    engineers: teamMembers.engineers.map(generateEngineerCard),
+    teamName,
   };
+  // const generateNewCard = (teamMember) => {
+  //if statements
+  //   if (teamMember instanceof Manager) {
+  //     //return each generated card
+  //     return generateManagerCard(teamMember);
+  //   }
+  //   if (teamMember instanceof Engineer) {
+  //     return generateEngineerCard(teamMember);
+  //   }
+  //   if (teamMember instanceof Intern) {
+  //     return generateInternCard(teamMember);
+  //   }
+  // };
   //map over each teamMember card pass in the generated card
-  const teamMembersCards = teamMembers.map(generateNewCard);
+
+  console.log(generatedCards);
   //need to add the big file copied over with template literals except the 4 SECTIONS?
   //return the cards and join
-  const cardContainer = teamMembersCards.join("");
-  return ``;
+
+  return generatedCards;
+};
+
+const makeHTMLShell = (teamData) => {
+  return `<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Team Profile Generator</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+      <h1 class="text-center m-3">${teamData.teamName}⚡️</h1>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        <!-- main cards -->
+        ${teamData.manager}
+        ${teamData.interns.join("")}
+        ${teamData.engineers.join("")}
+    </div>
+    </body>
+  </html>`;
 };
 
 //export the modules
 module.exports = {
   generateHTML,
-  cardContainer,
+  makeHTMLShell,
 };
