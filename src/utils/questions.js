@@ -102,9 +102,9 @@ const questionsContinue = [
 //export the objects
 module.exports = {
   teamQuestions,
+  employeeRoleQuestions,
   managerQuestions,
   engineerQuestions,
   internQuestions,
   questionsContinue,
-  employeeRoleQuestions,
 };
