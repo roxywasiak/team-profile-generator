@@ -1,5 +1,14 @@
 # Title: team-profile-generator
 
+![MIT](https://img.shields.io/badge/License-MIT-blue)
+
+- [Description](#description)
+- [Installation](#installation)
+- [Video Link](#video-link)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Contact me](#contact-me)
+
 # Description
 
 ## A command line application which takes info to generate a html webpage which displays team profiles
@@ -23,7 +32,19 @@ When I select the intern option then I am prompted to enter the intern’s name,
 
 When I decide to finish building my team then I exit the application, and the HTML is generated.
 
-# Tests Demo
+# Installation
+
+Install the project using these steps:
+
+```
+
+git clone git@github.com:roxywasiak/team-profile-generator.git
+
+cd team-profile-generator
+
+npm run start
+
+```
 
 # Video link
 
@@ -32,3 +53,7 @@ When I decide to finish building my team then I exit the application, and the HT
 # Technologies
 
 HTML , JavaScript, Bootstrap, node.js, Inquirer, jest.js (TDD)
+
+## Contact Me
+
+## If you require more information about this application just drop me an [email](mailto:ruksclone@hotmail.com).
