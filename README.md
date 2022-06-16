@@ -9,7 +9,7 @@
 - [Technologies](#technologies)
 - [Contact me](#contact-me)
 
-# Description
+# Description 📕
 
 ## A command line application which takes info to generate a html webpage which displays team profiles
 
@@ -32,7 +32,7 @@ When I select the intern option then I am prompted to enter the intern’s name,
 
 When I decide to finish building my team then I exit the application, and the HTML is generated.
 
-# Installation
+# Installation 🔍
 
 Install the project using these steps:
 
@@ -48,12 +48,22 @@ npm run start
 
 # Video link
 
-# Screenshots
+Watch the video walk-through of the application [CLICK](https://drive.google.com/file/d/1yS4OJqwR50kMKpG78dMyGWl3djCBoi21/view?usp=sharing)
 
-# Technologies
+# Screenshots 📸
+
+## Tests 🗂
+
+![alt text](./dist/assets/images/testscreenshot.png)
+
+## Application
+
+![alt text](./dist/assets/images/appscreenshot.png)
+
+# Technologies 🖥
 
 HTML , JavaScript, Bootstrap, node.js, Inquirer, jest.js (TDD)
 
-## Contact Me
+## Contact Me 👋
 
 ## If you require more information about this application just drop me an [email](mailto:ruksclone@hotmail.com).
