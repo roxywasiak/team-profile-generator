@@ -1,4 +1,3 @@
-console.log("hello from index.js");
 const path = require("path");
 //install the dependencies
 const inquirer = require("inquirer");
@@ -20,7 +19,6 @@ const { writeToFile } = require("./utils/writetofile");
 
 //import classes
 const Manager = require("./lib/Manager");
-//NOT SURE WHY THESE ARE NOT BEING READ?
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const { generateHTML, makeHTMLShell } = require("./utils/generatefile");

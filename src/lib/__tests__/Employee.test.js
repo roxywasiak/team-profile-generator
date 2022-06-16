@@ -1,5 +1,5 @@
 //require Employee //Employee constructor
-const Employee = require("../lib/Employee");
+const Employee = require("../Employee");
 const name = "Rukhsana Wasiak";
 const id = "12345678";
 const email = "ruksclone@hotmail.com,";

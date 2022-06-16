@@ -40,7 +40,7 @@ const generateEngineerCard = (engineer) => {
       Please get in touch if you you would like to collaborate
     </p>
     <p class="card-text">Contact me via Github</p>
-    <a href="https://github.com/${engineer.gitHubUsername}" class="btn btn-primary"
+    <a href="https://github.com/${engineer.github}" class="btn btn-primary"
       >GitHub</a
     >
   </div>
@@ -61,7 +61,7 @@ const generateInternCard = (intern) => {
     <p class="card-text">${intern.id}</p>
     <p class="card-text">${intern.school}</p>
     <p class="card-text">
-      If you would like to ge tin touch please contact me below
+      If you would like to get in touch please contact me below
     </p>
     <a href="mailto:${intern.email}" class="btn btn-primary"
       >Email</a
@@ -78,20 +78,6 @@ const generateHTML = (teamName, teamMembers) => {
     engineers: teamMembers.engineers.map(generateEngineerCard),
     teamName,
   };
-  // const generateNewCard = (teamMember) => {
-  //if statements
-  //   if (teamMember instanceof Manager) {
-  //     //return each generated card
-  //     return generateManagerCard(teamMember);
-  //   }
-  //   if (teamMember instanceof Engineer) {
-  //     return generateEngineerCard(teamMember);
-  //   }
-  //   if (teamMember instanceof Intern) {
-  //     return generateInternCard(teamMember);
-  //   }
-  // };
-  //map over each teamMember card pass in the generated card
 
   console.log(generatedCards);
   //need to add the big file copied over with template literals except the 4 SECTIONS?
@@ -116,7 +102,7 @@ const makeHTMLShell = (teamData) => {
       <link rel="stylesheet" href="./styles.css" />
     </head>
     <body>
-      <h1 class="text-center m-3">${teamData.teamName}⚡️</h1>
+      <h1 class="text-center m-3">⚡️${teamData.teamName}⚡️</h1>
       <div class="d-flex flex-row flex-wrap justify-content-center">
         <!-- main cards -->
         ${teamData.manager}
